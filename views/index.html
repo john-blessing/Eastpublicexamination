@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>东方公考</title>
+    <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+    <header>
+        <div class="wraper-inner">
+            <div>
+                <img src="assets/logo.png" alt="">
+                <img class="dong" src="assets/东方公考logo.png" alt="">
+                <img src="assets/slogan云南点师_03.png" alt="">
+                <span>咨询电话: 0871-65177339</span>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="./assets/banner.png" alt="">
+
+    </div>
+    <div class="aside">
+        <div class="contact">
+            <div class="tou">
+                <div><i></i></div>
+                <p>在线咨询</p>
+            </div>
+            <div class="qq">
+                <a href=""><img src="assets/QQ.png" alt=""></a>
+            </div>
+            <div class="phone">
+                <a href=""><img src="assets/phone.png" alt=""></a>
+            </div>
+        </div>
+        <br>
+        <div class="contact">
+            <div class="tou other">
+                <div><i></i></div>
+                <p>在线咨询</p>
+            </div>
+            <div class="qq">
+                <a href=""><img src="assets/QQ-Copy.png" alt=""></a>
+            </div>
+            <div class="phone">
+                <a href=""><img src="assets/phone-copy.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="wraper-inner">
+        <div class="classify">
+            <dl>
+                <dt>
+                    <img src="./assets/presentation.png" alt="">
+                </dt>
+                <dd>
+                    不限课次
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./assets/presentation.png" alt="">
+                </dt>
+                <dd>
+                    报考指导
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./assets/1对1指导.png" alt="">
+                </dt>
+                <dd>
+                    一对一指导
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <img src="./assets/Layer_1.png" alt="">
+                </dt>
+                <dd>
+                    考官亲授
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="row1">
+        <div class="wraper-inner">
+            <h3 class="course-title">
+                精品课程
+                <span><a href="javascript:;">体验网络课 >></a></span>
+            </h3>
+            <% if(cources.length > 0){%>
+                <div class="courses">
+                    <%  cources.forEach(function(cource){%>
+                        <div class="course-item">
+                            <div><img class="produc-img" src="<%=cource.img%>"></div>
+                            <div class="course-main">
+                                <p class="course-content">授课内容：<span>行测申论理论课<span><span class="classroom">班次: <span>01</span>期</span>
+                                </p>
+                                <div class="schedule">
+                                    <p>课时: <span>12</span>天</p>
+                                    <p>时间: <span>12月10日-4月1日每周六开班</span></p>
+                                    <p>地点: <span>昆明</span></p>
+                                </div>
+                                <p class="price">价格: <span>1980</span>元</p>
+                                <p class="sp">笔试不过退6800</p>
+                            </div>
+                        </div>
+                        <%})%>
+                </div>
+                <%}%>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="wraper-inner">
+            <h2 class="title">学习体系</h2>
+            <div class="steps">
+                <% for(var i = 1; i<=5; i++){%>
+                    <div class="step">
+                        <h3>STEP
+                            <%=i%>
+                        </h3>
+                        <p class="step-one">12天掌握基础理论</p>
+                        <p>
+                            80天课时讲解解题技巧，考试方向、理论基础；16课时各模块阶段测试确定学生掌握程度；制定个性化学习辅导计划。
+                        </p>
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+    </div>
+    <div class="row3">
+        <div class="wraper-inner">
+            <h2 class="title">业界的专家</h2>
+            <% if(experts.length > 0) { %>
+                <div class="experts">
+                    <% experts.forEach(function(expert){ %>
+                        <div class="expert">
+                            <div class="expert-img"><img src="<%= expert.img%>" alt=""></div>
+                            <div class="expert-main">
+                                <p class="personal"><span><%= expert.name %></span>&nbsp;|&nbsp;
+                                    <%= expert.position %>
+                                </p>
+                                <p class="motto">座右铭：
+                                    <%= expert.motto %>
+                                </p>
+                                <p class="describe">
+                                    <%= expert.description %>
+                                </p>
+                            </div>
+                        </div>
+                        <% })%>
+                </div>
+                <% } %>
+                    <div class="more-experts"><a href="javascript:;">更多专家</a></div>
+        </div>
+    </div>
+    <div class="row4">
+        <div class="wraper-inner">
+            <h2 class="title">关于我们</h2>
+            <div class="about-us">
+                <div><img src="assets/Group 23.png" alt=""></div>
+                <div class="about-main">
+                    <p>统计显示，2015年，全国生产总值超5000亿的城市已达34个，全国超万亿的城市共有10个，其中上海、北京超过2万亿元，在1万—2万亿之间的有8个，分别为广州、深圳、天津、重庆、苏州、武汉、成都和杭州。</p>
+                    <p>在这十大城市中，有七个位居沿海，其中长三角3个，为沪苏杭；环渤海2个，即京津两大直辖市；珠三角2个，即广深两个一线城市。此外，广大中西部地区有三城入围，其中重庆为中西部唯一的直辖市，成都和武汉则属于传统的十大城市、大区的中心，也是各自所在省份的单极核心城市，例如成都GDP占四川的36%，武汉占湖北的37%。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row5">
+        <div class="wraper-inner">
+            <h2 class="title">我们的历程</h2>
+            <div class="history">
+                <div class="history-change">
+                    <div class="event">
+                        <p>创建规划班培训体系</p>
+                        <p><span class="pt">72%</span>笔试通过率</p>
+                    </div>
+                    <div class="ball">
+                        <span>2012</span>
+                    </div>
+                </div>
+                <div class="history-change">
+                    <div class="event">
+                        <p>创建VIP小班教学体系</p>
+                        <p>连续三年规划班综合过级率超<span class="pt">70%</span>引入考官培训官参与面试培训</p>
+                    </div>
+                    <div class="ball">
+                        <span>2013—2014</span>
+                    </div>
+                </div>
+                <div class="history-change">
+                    <div class="event">
+                        <p>特聘云南省申论标准 制定者作为培训顾问
+                        </p>
+                        <p>选调生通过率<span class="pt">90%</span> 司法警官45个应届生岗位，新东方学员占50%
+
+                        </p>
+                    </div>
+                    <div class="ball">
+                        <span>2015</span>
+                    </div>
+                </div>
+                <div class="history-change">
+                    <div class="event">
+                        <p>最难公考季 成绩优异
+                        </p>
+                        <p>国考<span class="pt">75人</span>进入国税、海关等部门，<span class="pt">17人</span>通过国家机关笔试面试及心理测试，<span class="pt">213人</span>通过云南省公考笔面试
+
+                        </p>
+                    </div>
+                    <div class="ball">
+                        <span>2016</span>
+                    </div>
+                </div>
+                <div class="history-line"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row6">
+        <div class="wraper-inner">
+            <div class="news">
+                <p>全方位的就业信息<span><a href="javascript:;">更多></a></span></p>
+                <% if(news.length > 0){%>
+                    <ul class="news-list">
+                        <% news.forEach(function(item){%>
+                            <li><a href="javascript:;"><%=item.content%></a></li>
+                        <%})%>
+                    </ul>
+                <%}%>
+            </div>
+            <div class="news">
+                <p>全方位的就业信息<span><a href="javascript:;">更多></a></span></p>
+                <% if(news.length > 0){%>
+                    <ul class="download">
+                        <% news.forEach(function(item){%>
+                            <li><a href="javascript:;"><%=item.content%></a><i></i></li>
+                        <%})%>
+                    </ul>
+                <%}%>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="javascript:;">返回</a></li>
+            <li><a href="javascript:;">点师成金官网</a></li>
+            <li><a href="javascript:;">国家公务员局官网</a></li>
+            <li><a href="javascript:;">教师资格证靠前培训</a></li>
+            <li><a href="javascript:;">明日之星教师实践技能培训</a></li>
+        </ul>
+        <div>
+            <p class="address">
+                <span>东方公考免费咨询电话: 0871-65177339</span>
+                <span>地址: 昆明市小菜园龙泉路11号金太阳大厦北楼</span>
+            </p>
+        </div>
+        <div class="footer-end"></div>
+    </footer>
+</body>
+
+</html>
